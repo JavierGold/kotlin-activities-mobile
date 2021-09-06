@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Activities_Tarea">
         <activity
+            android:name=".TotalImage"
+            android:exported="true" />
+        <activity
+            android:name=".ImageDescription"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

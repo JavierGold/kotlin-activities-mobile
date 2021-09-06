@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ISSC/Semestre_6/Desarrollo_Movil/Activities_Tarea/app/src/main/res/drawable/ic_raqueta.xml" value="0.1" />
+        <entry key="..\:/ISSC/Semestre_6/Desarrollo_Movil/Activities_Tarea/app/src/main/res/layout/activity_image_description.xml" value="0.1" />
         <entry key="..\:/ISSC/Semestre_6/Desarrollo_Movil/Activities_Tarea/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/ISSC/Semestre_6/Desarrollo_Movil/Activities_Tarea/app/src/main/res/layout/activity_total_image.xml" value="0.1" />
       </map>
     </option>
   </component>
