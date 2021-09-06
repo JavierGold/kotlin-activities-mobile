@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     private var counter = 1
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnAccept: Button
     private lateinit var imvIcon: ImageView
 
+    private lateinit var btnFavoritos: Button
+    private lateinit var txtNumber: TextView
+
     private lateinit var imagesArray: Array<Image>
 
 
@@ -34,6 +38,9 @@ class MainActivity : AppCompatActivity() {
         btnRight = findViewById(R.id.btnRight)
         btnAccept = findViewById(R.id.btnAccept)
         imvIcon = findViewById(R.id.imvIcon)
+        btnFavoritos = findViewById(R.id.btnFavoritos)
+        txtNumber = findViewById(R.id.txtNumber)
+
 
         imagesArray = image.getAllImages()
 
@@ -62,9 +69,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnAccept.setOnClickListener {
+            txtNumber.setText("")
             startActivity(Intent(this, ImageDescription::class.java).apply {
                 putExtra("imageSelected", imagesArray[counter])
+                putExtra("numberSelected", counter)
             })
+        }
+
+        btnFavoritos.setOnClickListener {
+            txtNumber.setText(Image().countFavorites().toString())
         }
     }
 

@@ -27,5 +27,18 @@ class Image (
             )
     }
 
+    fun changeFavorite(number: Int, favorito: Boolean) {
+        images[number].favorito = favorito
+    }
+
+    fun countFavorites(): Int {
+        var count = 0
+        images.forEach {
+
+            if (it.favorito) count++
+        }
+        return count
+    }
+
     fun getAllImages() = images
 }
